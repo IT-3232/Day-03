@@ -27,7 +27,14 @@ public class AppController {
 	
 	List<Student> students = new ArrayList<Student>();
 	
-	
+	@GetMapping("/list")
+	public List<Student> GetDetails() {
+			 students.add(ob1);
+			 students.add(ob2);
+			 students.add(ob3);
+			 students.add(ob4);
+			 return students;
+	}
 	
 	
 	
