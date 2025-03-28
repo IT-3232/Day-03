@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import lk.ac.vau.fas.ict.model.Student;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -23,5 +25,11 @@ public class AppController {
         return ob1.getName();
     }
     
+	@GetMapping("/getdetails")
+	public Student getdetails() {
+		return ob1;
+	}
 	
+
+
 }
