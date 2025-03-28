@@ -24,6 +24,7 @@ public class AppController {
 	Student ob3 = new Student("2020ict49","goka",25,"IT",4.0);
 	Student ob4 = new Student("2020ict32","baiyamalliteshan",25,"IT",4.0);
 	
+	Student[] arr = {ob1,ob2,ob3,ob4};
 	
 	List<Student> students = new ArrayList<Student>();
 	
@@ -37,7 +38,17 @@ public class AppController {
 	}
 	
 	
-	
+	 @GetMapping("/student/{regno}")
+	    public Student GetDetailsbyregnum(@PathVariable("regno") String regno) {
+	                                       
+	              for(int i=0; i<arr.length; i++) {
+	            	  if(arr[i].getRegNo().equals(regno)) {
+	            		  return arr[i];
+	            	  }
+	              }
+	        return null;
+	        
+	    }
 
 
    @GetMapping("/age/{ag}")
